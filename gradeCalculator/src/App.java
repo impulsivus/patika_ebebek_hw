@@ -11,8 +11,20 @@ public class App {
             float english = Float.parseFloat(console.readLine("English score: "));
             float history = Float.parseFloat(console.readLine("History score: "));
             float music = Float.parseFloat(console.readLine("Music score: "));
-            if((math + physics + chemistry + english + history + music) / 6 >= 60) System.out.println("Passed the class");
-            else System.out.println("Failed to pass the class");
+
+            boolean didPass = (math + physics + chemistry + english + history + music) / 6 >= 60;
+
+
+            // Would be better with a function, but even using "if-else" statments is not allowed, this should work too...
+            while (didPass) {
+                System.out.println("Passed the class");
+                break;
+            }
+            while (!didPass) {
+                System.out.println("Failed to pass the class");
+                break;
+            }
+            
         } catch (NumberFormatException e) {
             throw new IllegalArgumentException();
         }
