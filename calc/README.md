@@ -1,0 +1,3 @@
+# Calculator
+
+Perdorms simple calculations.
